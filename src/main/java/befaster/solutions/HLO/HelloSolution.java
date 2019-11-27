@@ -1,9 +1,14 @@
 package befaster.solutions.HLO;
 
-import befaster.runner.SolutionNotImplementedException;
-
 public class HelloSolution {
     public String hello(String friendName) {
-        throw new SolutionNotImplementedException();
+        return "Hello " + friendName;
+    }
+
+    public static void main(String[] args){
+        HelloSolution sol = new HelloSolution();
+        String message = sol.hello("David");
+        System.out.println("The result is:" + message);
     }
 }
+
