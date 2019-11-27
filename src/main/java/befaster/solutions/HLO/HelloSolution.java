@@ -2,7 +2,7 @@ package befaster.solutions.HLO;
 
 public class HelloSolution {
     public String hello(String friendName) {
-        return "Hello " + friendName;
+        return "Hello, World!";
     }
 
     public static void main(String[] args){
@@ -11,4 +11,5 @@ public class HelloSolution {
         System.out.println("The result is:" + message);
     }
 }
+
 
