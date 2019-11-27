@@ -21,7 +21,7 @@ public class FizzBuzzSolution {
             ok1 = 1;
         if(number%5 == 0 || cond5 == 1)
             ok2 = 1;
-        if((number%5 == 0 || cond5 == 1)&&(number%3 == 0 || cond3 == 1))
+        if(ok1 + ok2 == 2)
             ok3 = 1;
 
         System.out.println(ok1 +" "+ ok2);
@@ -30,10 +30,11 @@ public class FizzBuzzSolution {
             return "fizz";
         else if(ok2 == 1)
             return "buzz";
-        else if(ok1 == 1 && ok2 == 1)
-            return "fizz buzz";
         else
             return String.valueOf(number);
+
+        if((ok1 == 1) && (ok2 == 1))
+            return "fizz buzz";
     }
 
     public static void main(String[] args){
@@ -43,4 +44,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
