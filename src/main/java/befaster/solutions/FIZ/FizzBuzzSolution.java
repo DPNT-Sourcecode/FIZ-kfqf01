@@ -24,9 +24,9 @@ public class FizzBuzzSolution {
         if(number%2 != 0)
             fake = "fake ";
 
-        if((number % 3 == 0 && cond3 == 1) && (number % 5 == 0 && cond5 == 1))
+        if(((number % 3 == 0 && cond3 == 1) && (number % 5 == 0 || cond5 == 1)) || ((number % 3 == 0 || cond3 == 1) && (number % 5 == 0 && cond5 == 1)))
             return "fizz buzz " + fake + "deluxe";
-        if((number % 3 == 0 && cond3 == 1))
+        else if((number % 3 == 0 && cond3 == 1))
             return "fizz " + fake + "deluxe";
         else if((number % 5 == 0 && cond5 == 1))
             return "buzz " + fake + "deluxe";
@@ -42,8 +42,9 @@ public class FizzBuzzSolution {
 
     public static void main(String[] args){
         FizzBuzzSolution sol = new FizzBuzzSolution();
-        String result = sol.fizzBuzz(5);
+        String result = sol.fizzBuzz(45);
         System.out.println("The result is:" + result);
     }
 
 }
+
