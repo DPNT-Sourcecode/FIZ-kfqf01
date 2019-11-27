@@ -8,6 +8,7 @@ public class FizzBuzzSolution {
         int condid = 1;
         int copy = number;
         int deluxe = 0;
+        String fake = "";
 
         while (copy != 0) {
             if (copy % 10 == 3)
@@ -30,30 +31,35 @@ public class FizzBuzzSolution {
         if(number>10 && condid == 1)
             deluxe = 1;
 
+        if(number%2 != 0)
+            fake = "fake ";
+
+
 
         if((number % 3 == 0 || cond3 == 1) && (number % 5 == 0 || cond5 == 1) && deluxe == 1)
-            return "fizz buzz deluxe";
+            return "fizz buzz " + fake + "deluxe";
         else if ((number % 3 == 0 || cond3 == 1) && (number % 5 == 0 || cond5 == 1))
             return "fizz buzz";
         else if((number % 3 == 0 || cond3 == 1) && deluxe == 1)
-            return "fizz deluxe";
+            return "fizz " + fake + "deluxe";
         else if((number % 5 == 0 || cond5 == 1) && deluxe == 1)
-            return "buzz deluxe";
+            return "buzz " + fake + "deluxe";
         else if (number % 5 == 0 || cond5 == 1)
             return "buzz";
         else if (number % 3 == 0 || cond3 == 1)
             return "fizz";
         else if (deluxe == 1)
-            return "deluxe";
+            return fake + "deluxe";
         else
             return String.valueOf(number);
     }
 
     public static void main(String[] args){
         FizzBuzzSolution sol = new FizzBuzzSolution();
-        String result = sol.fizzBuzz(1000);
+        String result = sol.fizzBuzz(444);
         System.out.println("The result is:" + result);
     }
 
 }
+
 
