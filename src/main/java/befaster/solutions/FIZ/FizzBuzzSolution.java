@@ -19,7 +19,7 @@ public class FizzBuzzSolution {
 
         copy = number;
 
-        while(copy>10){
+        while(copy>=10){
             if (copy % 10 != ((copy / 10) % 10)) {
                 condid = 0;
                 break;
@@ -51,8 +51,9 @@ public class FizzBuzzSolution {
 
     public static void main(String[] args){
         FizzBuzzSolution sol = new FizzBuzzSolution();
-        String result = sol.fizzBuzz(53);
+        String result = sol.fizzBuzz(1000);
         System.out.println("The result is:" + result);
     }
 
 }
+
